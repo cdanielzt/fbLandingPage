@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    position: relative;
+    background: white;
+    min-height: 100vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (min-width: 991px){
+    .main{
+        padding: 0 100px;
+        background: linear-gradient(120deg, #fff,#fff 62%,#3b5998 62%, #3b5998 100%);
+    }
+}
+
+.topnav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.links{
+    display: none;
+}
+
+.links.menu-mobile{
+    margin-top: 70px;
+    display: block;
+    line-height: 1.7;
+}
+.topnav .hamburguer{
+    padding: 5px;
+    color: #333;
+    font-size: 30px;
+    line-height: 0;
+
+}
+
+.topnav .hamburguer ion-icon{
+    padding: 0;
+    margin: 0;
+}
+@media (min-width: 520px){
+    .topnav .links{
+        display: flex;
+    }
+    .topnav .hamburguer{
+        display: none;
+    }
+}
+
+@media (min-width: 991px){
+    .topnav{
+        padding: 30px 100px;
+        justify-content: flex-start;
+    }
+    .topnav .links{
+        display: flex;
+    }
+}
+
+.topnav .logo img{
+    max-width: 50px;
+    margin-right: 20px;
+}
+
+
+.links li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+.links li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.links li a:hover,
+.links li a.active{
+    color: #2d88ff;
+}
+
+.app{
+    position: absolute;
+    right: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #3b5998;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 991px){
+    .app{
+        display: flex;
+    }
+}
+
+.app:hover{
+    background:#3b5998;
+    color: white;
+}
+.app ion-icon{
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+
+.content .text{
+    max-width: 800px;
+    text-align: center;
+}
+.content .text h2{
+    font-size: 3em;
+    color: #3b5998;
+}
+
+@media (min-width: 991px){
+    .content{
+        flex-direction: row;
+        margin: auto;
+    }
+    .content .text{
+        text-align: left;
+    }
+    .content .text h2{
+        font-size: 6em;
+    }
+}
+
+
+
+.content .text p{
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.8em;
+}
+
+.content .text h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.btn{
+    background: #3b5998;
+    color: white;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    margin: 5px 20px 5px 0;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background: #2d88ff;
+}
+
+.btn ion-icon{
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+.slide-container img{
+    margin: 0;
+  
+    height: 500px;
+    max-width: 300px;
+    display: none;
+}
+
+@media (min-width: 991px){
+    .slide-container img{
+        margin-left: 50px;
+        margin-right: 100px;
+    }
+}
+
+
+.slide-container img.active{
+    display: block;
+}
+
+.dots{
+    position: relative;
+    top: initial;
+    transform: none;
+    right: initial;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+
+.dots .dot{
+    position: relative;
+    width: 25px;
+    height: 10px;
+    background:#3b5998;
+    display: inline-flex;
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0.2;
+}
+.dots .dot.active{
+    opacity: 1;
+}
+
+@media (min-width: 991px){
+    .dots{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 80px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        opacity: 1;
+    }
+    .dots .dot{
+        width: 10px;
+        height: 30px;
+        background: rgba(255,255,255,0.25);
+    }
+
+    .dots .dot.active{
+        background: white;
+    }
+}
+
+
+
+.social-icons{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+}
+
+.social-icons li{
+    list-style: none;
+    margin-right: 20px;
+}
+.social-icons li a{
+    font-size: 1.8em;
+    color: #3b5998;
+}
+
+.social-icons li a:hover{
+    color: #2d88ff;
+}
+
